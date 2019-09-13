@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns:typens="urn:{{var wsdl.name}}" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/"
+    name="{{var wsdl.name}}" targetNamespace="urn:{{var wsdl.name}}" xmlns:ns0="urn:Magento">
+    
+    <!--BEGIN MESSAGES -->
+    <message name="softvarProductListRequest">
+        <part name="sessionId" type="xsd:string" />
+        <part name="offset" type="xsd:int" />
+    </message>
+    <message name="softvarProductListResponse">
+        <part name="result" type="typens:string" />
+    </message>
+    <message name="softvarOrderListRequest">
+        <part name="sessionId" type="xsd:string" />
+        <part name="offset" type="xsd:int" />
+    </message>
+    <message name="softvarOrderListResponse">
+        <part name="result" type="typens:string" />
+    </message>
+    <message name="softvarOrderInvoiceRequest">
+        <part name="sessionId" type="xsd:string" />
+    </message>
+    <message name="softvarOrderInvoiceResponse">
+        <part name="result" type="typens:string" />
+    </message>
+    <message name="softvarOrderShipmentRequest">
+        <part name="sessionId" type="xsd:string" />
+    </message>
+    <message name="softvarOrderShipmentResponse">
+        <part name="result" type="typens:string" />
+    </message>
+    <message name="softvarOrderAddCommentRequest">
+        <part name="sessionId" type="xsd:string" />
+    </message>
+    <message name="softvarOrderAddCommentResponse">
+        <part name="result" type="typens:string" />
+    </message>
+    <message name="softvarProductCreateRequest">
+        <part name="sessionId" type="xsd:string" />
+    </message>
+    <message name="softvarProductCreateResponse">
+        <part name="result" type="typens:string" />
+    </message>
+    <message name="softvarCategoryListRequest">
+        <part name="sessionId" type="xsd:string" />
+        <part name="offset" type="xsd:int" />
+    </message>
+    <message name="softvarCategoryListResponse">
+        <part name="result" type="typens:string" />
+    </message>
+    <message name="softvarCategoryCreateRequest">
+        <part name="sessionId" type="xsd:string" />
+    </message>
+    <message name="softvarCategoryCreateResponse">
+        <part name="result" type="typens:string" />
+    </message>
+    <message name="softvarPriceUpdateRequest">
+        <part name="sessionId" type="xsd:string" />
+    </message>
+    <message name="softvarPriceUpdateResponse">
+        <part name="result" type="typens:string" />
+    </message>
+    <!--END MESSAGES -->
+    
+    <!--BEGIN PORT TYPES -->
+    <portType name="{{var wsdl.handler}}PortType">
+        <operation name="softvarProductList">
+            <documentation>Retrieve products</documentation>
+            <input message="typens:softvarProductListRequest" />
+            <output message="typens:softvarProductListResponse" />
+        </operation>
+    </portType>
+    <portType name="{{var wsdl.handler}}PortType">
+        <operation name="softvarOrderList">
+            <documentation>Retrieve Orders</documentation>
+            <input message="typens:softvarOrderListRequest" />
+            <output message="typens:softvarOrderListResponse" />
+        </operation>
+    </portType>
+    <portType name="{{var wsdl.handler}}PortType">
+        <operation name="softvarOrderInvoice">
+            <documentation>Invoice Orders</documentation>
+            <input message="typens:softvarOrderInvoiceRequest" />
+            <output message="typens:softvarOrderInvoiceResponse" />
+        </operation>
+    </portType>
+    <portType name="{{var wsdl.handler}}PortType">
+        <operation name="softvarOrderShipment">
+            <documentation>Shipment Orders</documentation>
+            <input message="typens:softvarOrderShipmentRequest" />
+            <output message="typens:softvarOrderShipmentResponse" />
+        </operation>
+    </portType>
+    <portType name="{{var wsdl.handler}}PortType">
+        <operation name="softvarOrderAddComment">
+            <documentation>Shipment Orders</documentation>
+            <input message="typens:softvarOrderAddCommentRequest" />
+            <output message="typens:softvarOrderAddCommentResponse" />
+        </operation>
+    </portType>
+    <portType name="{{var wsdl.handler}}PortType">
+        <operation name="softvarProductCreate">
+            <documentation>Create Products</documentation>
+            <input message="typens:softvarProductCreateRequest" />
+            <output message="typens:softvarProductCreateResponse" />
+        </operation>
+    </portType>
+    <portType name="{{var wsdl.handler}}PortType">
+        <operation name="softvarCategoryCreate">
+            <documentation>Create Categories</documentation>
+            <input message="typens:softvarCategoryCreateRequest" />
+            <output message="typens:softvarCategoryCreateResponse" />
+        </operation>
+    </portType>
+    <portType name="{{var wsdl.handler}}PortType">
+        <operation name="softvarCategoryList">
+            <documentation>Retrieve products</documentation>
+            <input message="typens:softvarCategoryListRequest" />
+            <output message="typens:softvarCategoryListResponse" />
+        </operation>
+    </portType>
+    <portType name="{{var wsdl.handler}}PortType">
+        <operation name="softvarPriceUpdate">
+            <documentation>Update prices</documentation>
+            <input message="typens:softvarPriceUpdateRequest" />
+            <output message="typens:softvarPriceUpdateResponse" />
+        </operation>
+    </portType>
+    <!--END PORT TYPES -->    
+    
+    <!--BEGIN BINDINGS --> 
+    <binding name="{{var wsdl.handler}}Binding" type="typens:{{var wsdl.handler}}PortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" />
+        <!--BEGIN CUSTOMER BINDINGS -->
+        <operation name="softvarProductList">
+            <soap:operation soapAction="urn:{{var wsdl.handler}}Action" />
+            <input>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </input>
+            <output>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </output>
+        </operation>
+        <operation name="softvarOrderList">
+            <soap:operation soapAction="urn:{{var wsdl.handler}}Action" />
+            <input>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </input>
+            <output>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </output>
+        </operation>
+        <operation name="softvarOrderInvoice">
+            <soap:operation soapAction="urn:{{var wsdl.handler}}Action" />
+            <input>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </input>
+            <output>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </output>
+        </operation>
+        <operation name="softvarOrderShipment">
+            <soap:operation soapAction="urn:{{var wsdl.handler}}Action" />
+            <input>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </input>
+            <output>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </output>
+        </operation>
+        <operation name="softvarOrderAddComment">
+            <soap:operation soapAction="urn:{{var wsdl.handler}}Action" />
+            <input>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </input>
+            <output>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </output>
+        </operation>
+        <operation name="softvarProductCreate">
+            <soap:operation soapAction="urn:{{var wsdl.handler}}Action" />
+            <input>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </input>
+            <output>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </output>
+        </operation>
+        <operation name="softvarCategoryList">
+            <soap:operation soapAction="urn:{{var wsdl.handler}}Action" />
+            <input>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </input>
+            <output>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </output>
+        </operation>
+        <operation name="softvarCategoryCreate">
+            <soap:operation soapAction="urn:{{var wsdl.handler}}Action" />
+            <input>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </input>
+            <output>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </output>
+        </operation>
+        <operation name="softvarPriceUpdate">
+            <soap:operation soapAction="urn:{{var wsdl.handler}}Action" />
+            <input>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </input>
+            <output>
+                <soap:body namespace="urn:{{var wsdl.name}}" use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </output>
+        </operation>
+        <!--END CUSTOMER BINDINGS --> 
+    </binding>
+    <!--END BINDINGS -->     
+</definitions>

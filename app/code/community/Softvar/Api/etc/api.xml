@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<config>
+	<api>
+		<resources>
+			<softvar_product translate="title" module="softvar">
+				<model>softvar/product_api</model>
+				<title>Softvar Product API</title>
+				<acl>softvar</acl>
+				<methods>
+					<list translate="title" module="softvar">
+						<title>List of products</title>
+						<method>items</method>
+					</list>
+					<create translate="title" module="softvar">
+						<title>Creation of products</title>
+						<method>create</method>
+					</create>
+				</methods>
+			</softvar_product>
+			<softvar_category translate="title" module="softvar">
+				<model>softvar/category_api</model>
+				<title>Softvar Category API</title>
+				<acl>softvar</acl>
+				<methods>
+					<list translate="title" module="softvar">
+						<title>List of categories</title>
+						<method>items</method>
+					</list>
+					<create translate="title" module="softvar">
+						<title>Creation of categories</title>
+						<method>create</method>
+					</create>
+				</methods>
+			</softvar_category>
+			<softvar_price translate="title" module="softvar">
+				<model>softvar/price_api</model>
+				<title>Softvar Price API</title>
+				<acl>softvar</acl>
+				<methods>
+					<list translate="title" module="softvar">
+						<title>List of prices</title>
+						<method>items</method>
+					</list>
+					<update translate="title" module="softvar">
+						<title>Creation of prices</title>
+						<method>update</method>
+					</update>
+				</methods>
+			</softvar_price>
+			<softvar_stock translate="title" module="softvar">
+				<model>softvar/stock_api</model>
+				<title>Softvar Stock API</title>
+				<acl>softvar</acl>
+				<methods>
+					<list translate="title" module="softvar">
+						<title>List of stocks</title>
+						<method>items</method>
+					</list>
+					<update translate="title" module="softvar">
+						<title>Update or create Stock of Products</title>
+						<method>update</method>
+					</update>
+				</methods>
+			</softvar_stock>
+			<softvar_order translate="title" module="softvar">
+				<model>softvar/order_api</model>
+				<title>Softvar Order API</title>
+				<acl>softvar</acl>
+				<methods>
+					<list translate="title" module="softvar">
+						<title>List of Orders</title>
+						<method>items</method>
+					</list>
+					<add_comment translate="title" module="softvar">
+						<title>Add Comment</title>
+						<method>addComment</method>
+					</add_comment>
+					<invoice translate="title" module="softvar">
+						<title>Invoice</title>
+						<method>invoice</method>
+					</invoice>
+					<shipment translate="title" module="softvar">
+						<title>Shipment</title>
+						<method>shipment</method>
+					</shipment>
+				</methods>
+			</softvar_order>
+		</resources>
+		<resources_alias>
+			<softvar_product>softvar_product</softvar_product>
+			<softvar_category>softvar_category</softvar_category>
+			<softvar_price>softvar_price</softvar_price>
+			<softvar_stock>softvar_stock</softvar_stock>
+			<softvar_order>softvar_order</softvar_order>
+		</resources_alias>
+		<v2>
+			<resources_function_prefix>
+				<softvar_product>softvarProduct</softvar_product>
+				<softvar_category>softvarCategory</softvar_category>
+				<softvar_price>softvarPrice</softvar_price>
+				<softvar_stock>softvarPrice</softvar_stock>
+				<softvar_order>softvarOrder</softvar_order>
+			</resources_function_prefix>
+		</v2>
+		<acl>
+			<resources>
+				<softvar translate="title" module="softvar">
+					<title>Softvar</title>
+					<sort_order>5</sort_order>
+					<list translate="title" module="softvar">
+						<title>Product data</title>
+					</list>
+					<create translate="title" module="softvar">
+						<title>Product data</title>
+					</create>
+				</softvar>
+			</resources>
+		</acl>
+	</api>
+</config>
