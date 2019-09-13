@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <softvar_tab translate="label" module="softvar">
+            <label>Softvar - API</label>
+            <sort_order>100</sort_order>
+        </softvar_tab>
+    </tabs>
+    <sections>
+        <softvar_section  translate="label" module="softvar">                    
+            <label>Configurações</label>
+            <tab>softvar_tab</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>            
+            <groups>
+                <softvar_group translate="label"> 
+                    <label>Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <softvar_button_token>
+                            <label>Gerar Token</label>
+                            <frontend_type>button</frontend_type>
+                            <frontend_model>softvar/button_token</frontend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </softvar_button_token>
+                        <softvar_token translate="title" module="softvar">
+                            <label>Token</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </softvar_token>
+                        <softvar_store_id translate="title" module="softvar">
+                            <label>Store Id</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>softvar/config_store</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Softvar store id</comment>
+                        </softvar_store_id>
+                        <softvar_customer_attribute_ie translate="title" module="softvar">
+                            <label>Inscrição Estadual</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>softvar/config_customerAttribute</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Atributo usado para "Inscrição Estadual"</comment>
+                        </softvar_customer_attribute_ie>
+
+                        <attributes_id translate="label">
+                            <label>Attribute Group Id</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>softvar/config_attributeset</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Default attribute group id</comment>
+                        </attributes_id>
+                        <softvar_variacao_horizontal translate="label">
+                            <label>Horizontal Variation Attribute</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>softvar/config_attribute</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Atributo usado para "Variação Horizontal".</comment>
+                        </softvar_variacao_horizontal>
+                        <softvar_variacao_vertical translate="label">
+                            <label>Vertical Variation Attribute</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>softvar/config_attribute</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Atributo usado para "Variação Vertical".</comment>
+                        </softvar_variacao_vertical>
+
+                        <softvar_fabricante translate="label">
+                            <label>Fabricante</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>softvar/config_attribute</source_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Atributo usado para "Fabricante/Manufacturer".</comment>
+                        </softvar_fabricante>
+
+                        <softvar_altura translate="label">
+                            <label>Altura</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>softvar/config_attribute</source_model>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Atributo usado para "Altura".</comment>
+                        </softvar_altura>
+
+                        <softvar_largura translate="label">
+                            <label>Largura</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>softvar/config_attribute</source_model>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Atributo usado para "Largura".</comment>
+                        </softvar_largura>
+
+                        <softvar_comprimento translate="label">
+                            <label>Comprimento</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>softvar/config_attribute</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Atributo usado para "Comprimento".</comment>
+                        </softvar_comprimento>
+                        
+                        <softvar_fretegratis translate="label">
+                            <label>Frete Gratis</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>softvar/config_attribute</source_model>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Atributo usado para "Frete Gratis".</comment>
+                        </softvar_fretegratis>
+                        <softvar_ean>
+                            <label>EAN</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>softvar/config_attribute</source_model>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Atributo usado para "EAN".</comment>
+                        </softvar_ean>
+                        <softvar_dataentrega translate="label">
+                            <label>Data de entrega</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>12</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Código usado para "Data da entrega".</comment>
+                        </softvar_dataentrega>
+                    </fields>
+                </softvar_group>
+                <softvar_street translate="label">
+                    <label>Mapeamento (Bairro, Rua, Complemento e número)</label>
+                    <sort_order>700</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <rua translate="label">
+                            <label>Rua</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>softvar/config_address</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment>Caso nenhuma opção seja selecionada, será usado valor padrão do magento.</comment>
+                        </rua>
+
+                        <numero translate="label">
+                            <label>Número</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>softvar/config_address</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment>Caso nenhuma opção seja selecionada, será usado valor padrão do magento.</comment>
+                        </numero>
+
+                        <complemento translate="label">
+                            <label>Complemento</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>softvar/config_address</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment>Caso nenhuma opção seja selecionada, será usado valor padrão do magento.</comment>
+                        </complemento>
+                        
+                        <bairro translate="label">
+                            <label>Bairro</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>softvar/config_address</source_model>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment>Caso nenhuma opção seja selecionada, será usado valor padrão do magento.</comment>
+                        </bairro>
+                    </fields>
+                </softvar_street>
+            </groups>
+        </softvar_section>
+    </sections>
+</config>
