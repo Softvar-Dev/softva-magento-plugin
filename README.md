@@ -3,7 +3,7 @@ Plugin Magento para integração com o ERP Softvar. O plugin é compatível com 
 
 Para Instalação, é só descompactar o arquivo na máquina local. 
 
-O Arquivo zip contém uma pasta chamada "app", que após ser descompactada na máquina local, você terá que pegá-la e mover para a pasta raíz do projeto Mangento de seu servidor. 
+O Arquivo zip contém uma pasta chamada "app", que após ser descompactada na máquina local, você terá que pegá-la e mover para a pasta raíz do projeto Magento de seu servidor. 
 
 Após mover a pasta, o Magento irá pedir para fazer um "merge" da nova pasta, e PRONTO! A instalação do plugin da Softvar já foi concluída.
 
